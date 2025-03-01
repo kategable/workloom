@@ -51,6 +51,9 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "hmr": false
+      },
       "configurations": {
         "production": {
           "buildTarget": "hr-loom:build:production"
