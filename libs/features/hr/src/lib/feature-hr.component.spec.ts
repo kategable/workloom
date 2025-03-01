@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LibFeaturesHrComponent } from './lib-features-hr.component';
+import { FeatureHrComponent } from './feature-hr.component';
 
-describe('LibFeaturesHrComponent', () => {
-  let component: LibFeaturesHrComponent;
-  let fixture: ComponentFixture<LibFeaturesHrComponent>;
+describe('FeatureHrComponent', () => {
+  let component: FeatureHrComponent;
+  let fixture: ComponentFixture<FeatureHrComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LibFeaturesHrComponent],
+      imports: [FeatureHrComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LibFeaturesHrComponent);
+    fixture = TestBed.createComponent(FeatureHrComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

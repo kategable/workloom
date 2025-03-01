@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { LibFeaturesHrComponent } from '@workloom/lib-features-hr';
+import { RouterModule } from '@angular/router'; 
 
 @Component({
-  imports: [LibFeaturesHrComponent, RouterModule],
+  imports: [ RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

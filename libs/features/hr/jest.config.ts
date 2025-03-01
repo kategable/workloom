@@ -1,5 +1,5 @@
 export default {
-  displayName: 'lib-features-hr',
+  displayName: 'lib-feature-hr',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/features/hr',

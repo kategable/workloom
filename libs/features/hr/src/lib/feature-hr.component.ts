@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: true,
-  selector: 'lib-lib-features-hr',
+  selector: 'lib-feature-hr',
   imports: [CommonModule],
-  template: `<p>LibFeaturesHr works!</p>`,
+  template: `<p>feature-hr works!</p>`,
   styles: ``,
 })
-export class LibFeaturesHrComponent {}
+export class FeatureHrComponent {}

@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
-import { LibFeaturesHrComponent } from './lib-features-hr/lib-features-hr.component';
+import { FeatureHrComponent } from './feature-hr.component';
 
-export const libFeaturesHrRoutes: Route[] = [
-  { path: '', component: LibFeaturesHrComponent },
+export const libFeatureHrRoutes: Route[] = [
+   { path: '', pathMatch: 'full', component: FeatureHrComponent },
 ];

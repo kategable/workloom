@@ -49,8 +49,39 @@ npx nx g @nx/angular:app demo
 
 To generate a new library, use:
 
+### Feature library 
+
 ```sh
-npx nx generate @nx/angular:library --directory=libs/features/hr --name=lib-features-hr --routing=true --inlineStyle=true --inlineTemplate=true --skipModule=true --no-interactive --dry-run 
+npx nx generate @nx/angular:library --directory=libs/features/hr --name=lib-feature-hr --routing=true --skipModule=false --no-interactive --standalone=false  --dry-run 
+
+
+npx nx generate @nx/angular:component --name=feature-hr --path=libs/features/hr/src/lib/ --inlineStyle=true --inlineTemplate=true --no-interactive --dry-run
+
+
+npx nx generate @nx/angular:component --path=libs/features/hr/src/lib/feature-hr --export=true --inlineStyle=true --inlineTemplate=true --module=libs/features/hr/src/lib/lib-feature-hr.module.ts --no-interactive --dry-run 
+
+```
+
+### Data Access library  
+
+#### --standalone=false  # Prevents component creation
+
+```sh
+npx nx generate @nx/angular:library --directory=libs/data-access/hr --name=lib-data-access-hr --routing=false --skipModule=false  --no-interactive  --standalone=false --dry-run 
+```
+
+### Data Access library - adding ngrx
+
+#### This selects correct data-access module
+
+```sh 
+npx nx generate @nx/angular:ngrx-feature-store --name=hr-state --parent=libs/data-access/hr/src/lib/lib-data-access-hr.module.ts --barrels=true --facade=true --route=hr --no-interactive --dry-run 
+```
+
+## To Start the app
+
+```sh 
+npx nx run hr-loom:serve 
 ```
 
 You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
