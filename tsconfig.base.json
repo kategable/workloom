@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@workloom/lib-feature-hr": ["libs/features/hr/src/index.ts"],
+      "@workloom/lib-data-access-hr": ["libs/data-access/hr/src/index.ts"],
+      "@workloom/lib-feature-hr": ["libs/features/hr/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

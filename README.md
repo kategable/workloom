@@ -51,15 +51,9 @@ To generate a new library, use:
 
 ### Feature library 
 
+ 
 ```sh
-npx nx generate @nx/angular:library --directory=libs/features/hr --name=lib-feature-hr --routing=true --skipModule=false --no-interactive --standalone=false  --dry-run 
-
-
-npx nx generate @nx/angular:component --name=feature-hr --path=libs/features/hr/src/lib/ --inlineStyle=true --inlineTemplate=true --no-interactive --dry-run
-
-
-npx nx generate @nx/angular:component --path=libs/features/hr/src/lib/feature-hr --export=true --inlineStyle=true --inlineTemplate=true --module=libs/features/hr/src/lib/lib-feature-hr.module.ts --no-interactive --dry-run 
-
+npx nx generate @nx/angular:library --directory=libs/features/hr --lazy=true --name=lib-feature-hr --routing=true --flat=true --inlineStyle=true --inlineTemplate=true --no-interactive --dry-run 
 ```
 
 ### Data Access library  
@@ -73,10 +67,18 @@ npx nx generate @nx/angular:library --directory=libs/data-access/hr --name=lib-d
 ### Data Access library - adding ngrx
 
 #### This selects correct data-access module
-
+root and feature
 ```sh 
+
+npx nx generate @nx/angular:ngrx-root-store --project=hr-loom --name=hr-state --no-interactive --dry-run 
+
+
 npx nx generate @nx/angular:ngrx-feature-store --name=hr-state --parent=libs/data-access/hr/src/lib/lib-data-access-hr.module.ts --barrels=true --facade=true --route=hr --no-interactive --dry-run 
+
+npx nx generate @nx/angular:ngrx-feature-store --name=hr-state --minimal=true --parent=libs/data-access/hr/src/lib/lib-data-access-hr.module.ts --barrels=true --facade=true --no-interactive --dry-run 
 ```
+
+
 
 ## To Start the app
 

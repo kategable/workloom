@@ -11,6 +11,7 @@
   },
   "files": [],
   "include": [],
+   "composite": true,
   "references": [
     {
       "path": "./tsconfig.editor.json"

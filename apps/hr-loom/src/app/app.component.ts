@@ -1,11 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; 
+import { RouterModule } from '@angular/router';
 
 @Component({
-  imports: [ RouterModule],
+  imports: [RouterModule],
+  providers: [],
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  template: `
+    <h1>Welcome to {{ title }}</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/hr">HR-Loom</a></li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  `,
+  styles: ``,
 })
 export class AppComponent {
   title = 'hr-loom';

@@ -1,1 +1,3 @@
-export * from './lib/lib-feature-hr.module';
+export * from './lib/lib.routes';
+
+export * from './lib/lib-feature-hr.component';
