@@ -61,21 +61,27 @@ npx nx generate @nx/angular:library --directory=libs/features/hr --lazy=true --n
 #### --standalone=false  # Prevents component creation
 
 ```sh
-npx nx generate @nx/angular:library --directory=libs/data-access/hr --name=lib-data-access-hr --routing=false --skipModule=false  --no-interactive  --standalone=false --dry-run 
+npx nx generate @nx/angular:library --directory=libs/data-access/hr --name=lib-data-access-hr --routing=false --skipModule=true  --no-interactive  --standalone=false --dry-run 
 ```
 
 ### Data Access library - adding ngrx
 
 #### This selects correct data-access module
 root and feature
+
 ```sh 
-
 npx nx generate @nx/angular:ngrx-root-store --project=hr-loom --name=hr-state --no-interactive --dry-run 
+```
 
+to add a reference to the feature store
 
-npx nx generate @nx/angular:ngrx-feature-store --name=hr-state --parent=libs/data-access/hr/src/lib/lib-data-access-hr.module.ts --barrels=true --facade=true --route=hr --no-interactive --dry-run 
+```sh
+ npx nx generate @nx/angular:ngrx-feature-store --name=hr-store --minimal=true --parent=libs/features/hr/src/lib/lib.routes.ts --directory= --facade=true --no-interactive --dry-run 
+```
 
-npx nx generate @nx/angular:ngrx-feature-store --name=hr-state --minimal=true --parent=libs/data-access/hr/src/lib/lib-data-access-hr.module.ts --barrels=true --facade=true --no-interactive --dry-run 
+reducer 
+```sh
+npx nx generate @ngrx/schematics:reducer --name=hr --project=lib-data-access-hr --api=true --feature=true --no-interactive --dry-run 
 ```
 
 

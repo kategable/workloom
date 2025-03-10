@@ -5,6 +5,7 @@ export const appRoutes: Route[] = [
   { path: '', component: HomeComponent },
   {
     path: 'hr',
-    loadComponent: () => import('@workloom/lib-feature-hr').then(m => m.LibFeatureHrComponent)
+    loadChildren: () =>
+      import('@workloom/lib-feature-hr').then(m => m.libFeatureHrRoutes),
   },
 ];
