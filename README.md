@@ -44,13 +44,12 @@ Use the plugin's generator to create new projects.
 To generate a new application, use:
 
 ```sh
-npx nx g @nx/angular:app demo
+npx nx generate @nx/angular:application --directory=apps/train-loom --name=train-loom --inlineStyle=true --inlineTemplate=true --port=4201 --no-interactive --dry-run 
 ```
 
 To generate a new library, use:
 
 ### Feature library 
-
  
 ```sh
 npx nx generate @nx/angular:library --directory=libs/features/hr --lazy=true --name=lib-feature-hr --routing=true --flat=true --inlineStyle=true --inlineTemplate=true --no-interactive --dry-run 
