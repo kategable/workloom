@@ -1,6 +1,12 @@
+
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { hrFeature, hrFeatureActions } from '@workloom/lib-data-access-hr';
+import {
+  Employee,
+  hrFeature,
+  hrFeatureActions,
+  employeeViewModels,
+} from '@workloom/lib-data-access-hr';
 
 @Component({
   selector: 'lib-lib-feature-hr',
@@ -20,11 +26,10 @@ import { hrFeature, hrFeatureActions } from '@workloom/lib-data-access-hr';
     }
   `,
   styles: ``,
-  providers: [Store],
 })
 export class LibFeatureHrComponent {
   store = inject(Store);
-  employees = this.store.selectSignal(hrFeature.selectEmployees);
+  employees = this.store.selectSignal(employeeViewModels);
   loading = this.store.selectSignal(hrFeature.selectLoading);
   constructor() {
     this.store.dispatch(hrFeatureActions.loadHrs());
@@ -33,7 +38,11 @@ export class LibFeatureHrComponent {
     const uniqueId = Date.now();
     this.store.dispatch(
       hrFeatureActions.addEmployee({
-        employee: { name: 'New Employee', id: uniqueId },
+        employee: {
+          firstName: 'New',
+          lastName: 'Employee',
+          id: uniqueId,
+        } as Employee,
       })
     );
   }

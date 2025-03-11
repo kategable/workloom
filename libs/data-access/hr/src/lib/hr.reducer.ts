@@ -1,10 +1,11 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
 import * as HrActions from './hr.actions';
+import { Employee } from './hr.models';
 
 export const HR_STORE_FEATURE_KEY = 'hr';
 
 export interface HrState {
-  employees: { name: string; id: string }[];
+  employees: Employee[];
   loading: boolean;
 }
 

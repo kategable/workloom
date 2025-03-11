@@ -1,27 +1,16 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { hrFeature, HrState } from './hr.reducer';
+import { Employee } from './hr.models';
 
-// export const selectHrViewModel = createSelector(
-//   hrFeature.selectEmployees,
-//   hrFeature.selectLoading,
-//   (employees, loading) => ({ employees, loading })
-// );
-// export const selectFeature = (state: HrState) => state;
 
-// export const selectEmployees = createSelector(
-//   selectFeature,
-//   (state: HrState) => state.employees
-// );
-
-// export const selectLoading = createSelector(
-//   selectFeature,
-//   (state: HrState) => state.loading
-// );
 export const selectHrFeature =
   createFeatureSelector<HrState>(hrFeature.name);
 
 // Select specific data from the feature state
-export const selectHrEmployy = createSelector(
-  selectHrFeature,
-  state => state.employees
+export const employeeViewModels = createSelector(selectHrFeature, state =>
+  state.employees.map((emp: Employee) => ({
+    name: emp.firstName + ' ' + emp.lastName,
+    id: emp.id,
+  }))
 );
+
