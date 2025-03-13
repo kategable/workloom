@@ -12,7 +12,7 @@ import {
   selector: 'lib-lib-feature-hr',
   template: `
     @if (loading()) {
-    <li>Loading...</li>
+    <li>Loading data...</li>
     } @else {
     <h2>Employees</h2>
     <button (click)="addEmployee()">Add</button>

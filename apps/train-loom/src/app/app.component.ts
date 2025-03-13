@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
     <nav>
       <ul>
         <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/hr">HR Loom</a></li>
+        <li><a routerLink="/train">Train Loom</a></li>
       </ul>
     </nav>
     <router-outlet></router-outlet>
@@ -18,5 +18,5 @@ import { RouterModule } from '@angular/router';
   styles: ``,
 })
 export class AppComponent {
-  title = 'hr-loom';
+  title = 'train-loom';
 }

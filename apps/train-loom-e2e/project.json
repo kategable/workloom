@@ -1,0 +1,9 @@
+{
+  "name": "train-loom-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/train-loom-e2e/src",
+  "implicitDependencies": ["train-loom"],
+  "// targets": "to see all targets run: nx show project train-loom-e2e --web",
+  "targets": {}
+}
