@@ -1,15 +1,14 @@
-
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
   Employee,
+  employeeViewModels,
   hrFeature,
   hrFeatureActions,
-  employeeViewModels,
-} from '@workloom/lib-data-access-hr';
+} from '@workloom/data-access-hr';
 
 @Component({
-  selector: 'lib-lib-feature-hr',
+  selector: 'lib-feature-hr',
   template: `
     @if (loading()) {
     <li>Loading data...</li>

@@ -52,7 +52,7 @@ To generate a new library, use:
 ### Feature library 
  
 ```sh
-npx nx generate @nx/angular:library --directory=libs/features/hr --lazy=true --name=lib-feature-hr --routing=true --flat=true --inlineStyle=true --inlineTemplate=true --no-interactive --dry-run 
+npx nx generate @nx/angular:library --directory=libs/features/hr --lazy=true --name=feature-hr --routing=true --flat=true --inlineStyle=true --inlineTemplate=true --no-interactive --dry-run 
 ```
 
 ### Data Access library  
@@ -60,7 +60,7 @@ npx nx generate @nx/angular:library --directory=libs/features/hr --lazy=true --n
 #### --standalone=false  # Prevents component creation
 
 ```sh
-npx nx generate @nx/angular:library --directory=libs/data-access/hr --name=lib-data-access-hr --routing=false --skipModule=true  --no-interactive  --standalone=false --dry-run 
+npx nx generate @nx/angular:library --directory=libs/data-access/hr --name=data-access-hr --routing=false --skipModule=true  --no-interactive  --standalone=false --dry-run 
 ```
 
 ### Data Access library - adding ngrx
@@ -80,7 +80,7 @@ to add a reference to the feature store
 
 reducer 
 ```sh
-npx nx generate @ngrx/schematics:reducer --name=hr --project=lib-data-access-hr --api=true --feature=true --no-interactive --dry-run 
+npx nx generate @ngrx/schematics:reducer --name=hr --project=data-access-hr --api=true --feature=true --no-interactive --dry-run 
 ```
 
 

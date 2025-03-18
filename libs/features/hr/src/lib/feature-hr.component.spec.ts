@@ -1,8 +1,7 @@
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { LibFeatureHrComponent } from './lib-feature-hr.component';
-import { employeeViewModels } from '@workloom/lib-data-access-hr';
+import { employeeViewModels } from '@workloom/data-access-hr';
+import { LibFeatureHrComponent } from './feature-hr.component';
 
 describe('LibFeatureHrComponent', () => {
   let component: LibFeatureHrComponent;
@@ -16,12 +15,12 @@ describe('LibFeatureHrComponent', () => {
     }).compileComponents();
 
     store = TestBed.inject(MockStore);
-   store.overrideSelector(employeeViewModels, [
-     {
-       id: 123,
-       name: 'first name',
-     },
-   ]);
+    store.overrideSelector(employeeViewModels, [
+      {
+        id: 123,
+        name: 'first name',
+      },
+    ]);
     fixture = TestBed.createComponent(LibFeatureHrComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

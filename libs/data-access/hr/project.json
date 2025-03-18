@@ -1,5 +1,5 @@
 {
-  "name": "lib-data-access-hr",
+  "name": "data-access-hr",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/data-access/hr/src",
   "prefix": "lib",

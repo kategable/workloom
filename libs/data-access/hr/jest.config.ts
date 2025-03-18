@@ -1,5 +1,5 @@
 export default {
-  displayName: 'lib-data-access-hr',
+  displayName: 'data-access-hr',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/data-access/hr',

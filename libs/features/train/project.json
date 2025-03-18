@@ -1,5 +1,5 @@
 {
-  "name": "feature-hr",
+  "name": "feature-train",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/features/hr/src",
   "prefix": "lib",
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/features/hr/jest.config.ts"
+        "jestConfig": "libs/features/train/jest.config.ts"
       }
     },
     "lint": {
