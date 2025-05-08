@@ -16,8 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@workloom/data-access-hr": ["libs/data-access/hr/src/index.ts"],
-      "@workloom/feature-hr": ["libs/features/hr/src/index.ts"],
       "@workloom/data-access-train": ["libs/data-access/train/src/index.ts"],
+      "@workloom/feature-hr": ["libs/features/hr/src/index.ts"],
       "@workloom/train-feature": ["libs/features/train/src/index.ts"]
     }
   },
